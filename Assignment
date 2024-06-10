@@ -1,0 +1,84 @@
+# Assignment Azure Cloud Computing Practical Tasks
+
+Task 1... Deploy Linux and Windows Virtual Machines and Access Them Using SSH and RDP.
+
+         Step1. Create a Virtual Network (VNet):
+
+         Step2. Deploy a Linux Virtual Machine:
+
+         Step3. Access the Linux VM using SSH:
+              # ssh <username>@<public_ip_address>
+
+         Step4. Deploy a Windows Virtual Machine: 
+            
+         Step5. Access the Windows VM using RDP:
+
+
+Task 2.... Create an App Service Plan, Provision a Web App, and Deploy a Simple Welcome Page.
+
+         Step1. Create an App Service Plan:
+        
+         Step2. Provision a Web App:
+
+         Step3. Deploy a Simple Welcome Page:
+
+                ### Use Azure's built-in editor to create and deploy the HTML file:
+
+                  <!DOCTYPE html>
+                  <html lang="en">
+                  <head>
+                      <meta charset="UTF-8">
+                      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                      <title>Welcome</title>
+
+                  </head>
+                  <body>
+                      <h1>Welcome to Azure Web App!</h1>
+                  </body>
+                  </html>
+
+
+
+                 Save and Deploy the changes..
+
+Task 3.... Create Azure Container Registry (ACR), Pull Image, and Create a Container.
+
+        Step1. Create Azure Container Registry:
+
+        Step2. Push a Docker Image to ACR:
+
+                # Tag your local Docker image with the ACR login server name:
+                  (( docker tag <local_image_name> <acr_login_server>/<repository_name>:<tag> ))
+
+                # Log in to ACR from the CLI:
+                  (( az acr login --name <acr_name> ))
+
+                # Push the image to ACR:
+                  (( docker push <acr_login_server>/<repository_name>:<tag> ))
+
+         Step3. Create a Container Instance from the ACR Image:
+
+
+Task 4.... Create Container Instances and Deploy a Simple Docker Application.
+
+
+        Step1. Create a Container Instance:
+
+        Step2. Deploy a Simple Docker Application:
+
+              ## Use a basic Docker image, such as an Nginx image, for the deployment:
+                  docker pull nginx
+                  docker tag nginx <acr_login_server>/nginx:latest
+                  docker push <acr_login_server>/nginx:latest
+        
+        Step3. Create Container Groups:
+
+        Step4. Test Functionality:
+
+             # Access the container application using the provided public IP address or DNS name.
+             # Verify the application is running correctly by viewing the deployed web page.
+
+             
+
+        
+            
